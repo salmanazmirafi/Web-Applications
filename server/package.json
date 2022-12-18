@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Node MongoDB eCommerce Rest API using Stripe payment method, express, MongoDB, and JWT project",
   "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
   "author": "Salman Azmi Rafi",
   "license": "MIT"
 }
