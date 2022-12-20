@@ -1,21 +1,32 @@
+import "./sidebar.css";
+import {
+  LineStyle,
+  Timeline,
+  TrendingUp,
+  PermIdentity,
+  Storefront,
+  AttachMoney,
+  BarChart,
+  MailOutline,
+  DynamicFeed,
+  ChatBubbleOutline,
+  WorkOutline,
+  Report,
+} from "@material-ui/icons";
 import { Link } from "react-router-dom";
-import React from "react";
-import { AttachMoney, ChatBubbleOutline, DynamicFeed, LineStyle, MailOutline, PermIdentity, Report, Storefront, Timeline, TrendingUp, WorkOutline } from "@material-ui/icons";
-import { BarChart } from "recharts";
-import './sidebar.css'
 
-const Sidebar = () => {
+export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <Link to="/" className="sidebarIcon">
-              <li className="sidebarListItem active">
-                <LineStyle className="sidebarIcon" />
-                Home
-              </li>
+            <Link to="/" className="link">
+            <li className="sidebarListItem active">
+              <LineStyle className="sidebarIcon" />
+              Home
+            </li>
             </Link>
             <li className="sidebarListItem">
               <Timeline className="sidebarIcon" />
@@ -89,6 +100,4 @@ const Sidebar = () => {
       </div>
     </div>
   );
-};
-
-export default Sidebar;
+}

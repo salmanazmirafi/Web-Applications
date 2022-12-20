@@ -1,11 +1,10 @@
-import { ArrowDownward, ArrowUpward } from '@material-ui/icons'
-import React from 'react'
-import './featuredInfo.css'
+import "./featuredInfo.css";
+import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
 
-const FeaturedInfo = () => {
+export default function FeaturedInfo() {
   return (
-    <div className='featured'>
-        <div className="featuredItem">
+    <div className="featured">
+      <div className="featuredItem">
         <span className="featuredTitle">Revanue</span>
         <div className="featuredMoneyContainer">
           <span className="featuredMoney">$2,415</span>
@@ -34,9 +33,7 @@ const FeaturedInfo = () => {
           </span>
         </div>
         <span className="featuredSub">Compared to last month</span>
-        </div>
+      </div>
     </div>
-  )
+  );
 }
-
-export default FeaturedInfo

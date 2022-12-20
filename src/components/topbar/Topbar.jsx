@@ -1,35 +1,29 @@
-import { Badge } from "@material-ui/core";
-import { Language, Notifications, Settings } from "@material-ui/icons";
 import React from "react";
 import "./topbar.css";
+import { NotificationsNone, Language, Settings } from "@material-ui/icons";
 
-const Topbar = () => {
+export default function Topbar() {
   return (
-    <div className="topBar">
-      <div className="topBarWrapper">
+    <div className="topbar">
+      <div className="topbarWrapper">
         <div className="topLeft">
           <span className="logo">Albi</span>
         </div>
         <div className="topRight">
-          <div className="topBarIconContainer">
-            <Badge badgeContent={9} color="primary">
-              <Notifications className="bage" color="black"/>
-            </Badge>
-            <span className="topIconBadge"></span>
+          <div className="topbarIconContainer">
+            <NotificationsNone />
+            <span className="topIconBadge">2</span>
           </div>
-          <div className="topBarIconContainer">
-          <Badge badgeContent={4} color="primary">
-              <Language className="bage" color="black"/>
-            </Badge>
+          <div className="topbarIconContainer">
+            <Language />
+            <span className="topIconBadge">2</span>
           </div>
-          <div className="topBarIconContainer">
-          <Settings className="bage"/>
+          <div className="topbarIconContainer">
+            <Settings />
           </div>
-          <img src="https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=300" className="topAvatar" alt="" />
+          <img src="https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="topAvatar" />
         </div>
       </div>
     </div>
   );
-};
-
-export default Topbar;
+}
