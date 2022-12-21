@@ -11,6 +11,7 @@ import userRoute from "./routes/user.js";
 import productRouter from "./routes/product.js";
 import cartRouter from "./routes/cart.js";
 import orderRouter from "./routes/order.js";
+import stripeRouter from "./routes/stripe.js";
 
 //Security Middleware Import
 app.use(morgan("common"));
@@ -40,7 +41,8 @@ app.use("/api/v1/users", router);
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/products", productRouter);
 app.use("/api/v1/cart", cartRouter);
-app.use("/api/v1/cart", orderRouter);
+app.use("/api/v1/order", orderRouter);
+app.use("/api/v1/checkout", stripeRouter);
 
 // Database Connection
 mongoose.set("strictQuery", true);
