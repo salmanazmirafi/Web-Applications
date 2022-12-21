@@ -1,9 +1,17 @@
-import express from 'express'
-const router = express.Router()
+import express from "express";
+import { createCart, deleteCart, getAllCart, singleCart, updateCart } from "../controllers/cart.js";
+import { verifyToken, verifyTokenAndAdmin, verifyTokenAndAuthorization } from "../middleware/verifyToken.js";
+const cartRouter = express.Router();
 
-router.get("/", (req, res) => {
- 
-});
+// Crate Admin
+cartRouter.post("/", verifyToken, createCart);
+// Update Admin
+cartRouter.put("/:id", verifyTokenAndAuthorization, updateCart);
+// Delete Admin
+cartRouter.delete("/:id", verifyTokenAndAuthorization, deleteCart);
+// Get Single
+cartRouter.get("/find/:userId", verifyTokenAndAuthorization, singleCart);
+// Get All
+cartRouter.get("/", verifyTokenAndAdmin, getAllCart);
 
-
-export default router
+export default cartRouter;

@@ -1,9 +1,18 @@
 import express from 'express'
-const router = express.Router()
+import { createProduct, deleteProduct, getAllProduct, singleProduct, updateProduct } from '../controllers/product.js';
+import { verifyTokenAndAdmin } from '../middleware/verifyToken.js';
+const productRouter = express.Router()
 
-router.get("/", (req, res) => {
- 
-});
+// Crate
+productRouter.post("/", verifyTokenAndAdmin, createProduct);
+// Update
+productRouter.put("/:id", verifyTokenAndAdmin, updateProduct);
+// Delete
+productRouter.delete("/:id", verifyTokenAndAdmin, deleteProduct);
+// Get Single Admin
+productRouter.get("/find/:id", singleProduct);
+// Get All Admin
+productRouter.get("/", getAllProduct);
 
 
-export default router
+export default productRouter

@@ -14,11 +14,11 @@ const orderSchema = new mongoose.Schema(
         },
       },
     ],
-    amount:{type:Number, required:true},
-    address:{type:Object, required:true},
-    status:{type:Number, default:"Pending"},
+    amount: { type: Number, required: true },
+    address: { type: Object, required: true },
+    status: { type: Number, default: "Pending" },
   },
   { timestamps: true }
 );
 
-export default mongoose.model("User", orderSchema);
+export default mongoose.model("Order", orderSchema);
