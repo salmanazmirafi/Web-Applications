@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Info = styled.div`
@@ -42,6 +43,8 @@ const Circle = styled.div`
 const Image = styled.img`
   height: 75%;
   z-index: 2;
+  width: 100%;
+  object-fit: cover;
 `;
 
 const Icon = styled.div`
@@ -61,18 +64,20 @@ const Icon = styled.div`
 `;
 
 const Product = ({ item }) => {
-  console.log(item);
+
   return (
     <Container>
       <Circle />
-      <Image src={item.image} />
+      <Image src={item.img} />
       <Info>
         <Icon>
           <i className="fa-solid fa-cart-shopping"></i>
         </Icon>
-        <Icon>
+       <Link to={`/product/${item._id}`} style={{textDecoration:"none"}}>
+       <Icon>
           <i className="fa-solid fa-magnifying-glass"></i>
         </Icon>
+       </Link>
         <Icon>
           <i className="fa-solid fa-heart"></i>
         </Icon>

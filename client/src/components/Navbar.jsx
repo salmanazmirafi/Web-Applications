@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Badge } from "@material-ui/core";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 // Css
 const Container = styled.div`
@@ -39,7 +41,7 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
-  outline:none;
+  outline: none;
   ${mobile({ width: "50px" })}
 `;
 
@@ -51,9 +53,8 @@ const Center = styled.div`
 const Logo = styled.h1`
   font-weight: bold;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   ${mobile({ fontSize: "24px" })}
-
 `;
 const Right = styled.div`
   flex: 1;
@@ -61,7 +62,6 @@ const Right = styled.div`
   align-items: center;
   justify-content: flex-end;
   ${mobile({ flex: 2, justifyContent: "center" })}
-
 `;
 
 const MenuItem = styled.div`
@@ -73,33 +73,42 @@ const MenuItem = styled.div`
 // End Css
 
 const Navbar = () => {
+  const quantity = useSelector(state=> state.cart.quantity)
   return (
     <Container>
-    <Wrapper>
-      <Left>
-        <Language>EN</Language>
-        <SearchContainer>
-          <Input placeholder="Search" />
-          <i class="fa-solid fa-magnifying-glass" style={{ color: "gray", fontSize: 16 }} ></i>
-        </SearchContainer>
-      </Left>
-      <Center>
-        <Logo>SAR.</Logo>
-      </Center>
-      <Right>
-        <MenuItem>REGISTER</MenuItem>
-        <MenuItem>SIGN IN</MenuItem>
-        <MenuItem>
-        <Badge badgeContent={4} color="primary">
-             
-         <i style={{fontSize: "16px"}} class="fa-solid fa-cart-shopping"></i>
-          
+      <Wrapper>
+        <Left>
+          <Language>EN</Language>
+          <SearchContainer>
+            <Input placeholder="Search" />
+            <i
+              class="fa-solid fa-magnifying-glass"
+              style={{ color: "gray", fontSize: 16 }}
+            ></i>
+          </SearchContainer>
+        </Left>
+        <Center>
+          <Link to='/' style={{textDecoration:"none", color:"black"}}>
+            <Logo>SAR.</Logo>
+          </Link>
+        </Center>
+        <Right>
+          <MenuItem>REGISTER</MenuItem>
+          <MenuItem>SIGN IN</MenuItem>
+          <Link to='/cart'>
+          <MenuItem>
+            <Badge badgeContent={quantity} color="primary">
+              <i
+                style={{ fontSize: "16px" }}
+                class="fa-solid fa-cart-shopping"
+              ></i>
             </Badge>
-         
-        </MenuItem>
-      </Right>
-    </Wrapper>
-  </Container>
+          </MenuItem>
+          </Link>
+          
+        </Right>
+      </Wrapper>
+    </Container>
   );
 };
 
