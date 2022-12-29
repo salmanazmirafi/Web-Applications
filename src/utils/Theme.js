@@ -1,14 +1,20 @@
-export const darkTheme = {
-    bg:"#181818",
-    bgLighter:"#202020",
-    text:"white",
-    textSoft:"#aaaaaa",
-    soft:"#373737"
-  }
-  export const lightTheme = {
-    bg:"#f9f9f9",
-    bgLighter:"white",
-    text:"black",
-    textSoft:"#606060",
-    soft:"#f5f5f5"
-  }
+// import type { Theme } from "theme-ui";
+const theme = {
+    initialColorMode: "light",
+    colors: {
+      text: "black",
+      background: "white",
+      primary: "#1408e6",
+      inverseText: "blue",
+      modes: {
+        dark: {
+          text: "white",
+          background: "#282c34",
+          primary: "#8fceff",
+          inverseText: "green",
+        },
+      },
+    },
+  };
+  
+  export default theme;

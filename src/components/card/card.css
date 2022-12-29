@@ -1,0 +1,38 @@
+.cardContainer {
+  width: 360px;
+  margin-bottom: 45px;
+  cursor: pointer;
+  color: white;
+}
+.cardContainer .thamneal {
+  width: 100%;
+  height: 202px;
+  background-color: gray;
+  border-radius: 10px;
+}
+.cardContainer .detalis {
+  display: flex;
+  margin-top: 16px;
+  gap: 12px;
+  flex: 1;
+}
+.cardContainer .channelImage {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #999;
+}
+.cardContainer .chanelTitle{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(228, 228, 228);
+}
+.cardContainer .texts h4{
+    font-size: 14px;
+    color: rgb(228, 228, 228);
+    margin: 9px 0px;
+}
+.cardContainer .texts p{
+    font-size: 12px;
+    color: rgb(228, 228, 228);
+}

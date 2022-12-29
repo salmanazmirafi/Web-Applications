@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Video from "./pages/video/Video";
 import "./App.css";
+import SignIn from "./pages/sign/SignIn";
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
             <div className="wrapper">
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/video" element={<Video />} />
+                <Route path="/video/:id" element={<Video />} />
+                <Route path="/signin" element={<SignIn />} />
               </Routes>
             </div>
           </div>
