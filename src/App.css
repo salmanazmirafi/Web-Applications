@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+}
+.main{
+    flex: 7;
+    background-color: white;
+}
+.wrapper{
+    padding: 22px 96px;
+}
