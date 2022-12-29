@@ -1,0 +1,69 @@
+.containers {
+  flex: 1;
+  background-color: #0F0F0F;
+  height: 100vh;
+  color: white;
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  overflow-y: scroll;
+}
+
+.wrappers {
+  padding: 18px 26px;
+}
+.youtubeLogo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 25px;
+}
+.youtubeLogo img {
+  height: 36px;
+  width: 50px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  padding: 7.5px 0px;
+}
+hr {
+  margin: 15px 0px;
+  border: 0.5px solid black;
+}
+.login button {
+  padding: 5px 15px;
+  background-color: transparent;
+  border: 1px solid #3ea6ff;
+  color: #3ea6ff;
+  border-radius: 3px;
+  font-weight: 500;
+  margin-top: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #aaaaaa;
+  margin-bottom: 20px;
+}
+.about {
+  font-size: 10px;
+  margin: 10px 0;
+}
+.terms {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+.copy {
+  font-size: 12px;
+  padding-bottom: 30px;
+}
