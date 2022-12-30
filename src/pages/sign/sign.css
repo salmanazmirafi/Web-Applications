@@ -31,14 +31,16 @@
     color:gray;
 }
 .singContainer .singWrapper button{
+    padding: 5px 15px;
+    background-color: transparent;
+    border: 1px solid #3ea6ff;
+    color: #3ea6ff;
     border-radius: 3px;
-  border: none;
-  padding: 10px 20px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #181818;
-  border: 1px solid gray;
-  color: gray;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 .singContainer .more{
     display: flex;

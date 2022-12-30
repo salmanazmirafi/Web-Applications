@@ -1,0 +1,88 @@
+.videoContainer {
+  display: flex;
+  grid: 24px;
+}
+.videoContent {
+  flex: 5;
+}
+.videoContent .title {
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.Details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Details p {
+  color: rgb(196, 195, 195);
+}
+.DetalisButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.Details .DetalisButton button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  background-color: #3f3f3f;
+  color: rgb(219, 219, 219);
+  border: none;
+  outline: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+.HerLine {
+  margin: 15px 0;
+  border: 0.5px solid gray;
+}
+.Channel {
+  display: flex;
+  justify-content: space-between;
+}
+.ChannelInfo {
+  display: flex;
+  gap: 20px;
+}
+.ChannelInfo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.channelDetails {
+  display: flex;
+  flex-direction: column;
+  color: rgb(216, 212, 212);
+}
+.channelDetails h2 {
+  font-weight: 500;
+}
+.channelDetails span {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: rgb(216, 212, 212);
+  font-size: 12px;
+}
+.channelDetails p {
+  font-size: 14px;
+}
+.Channel .subscribe {
+  background-color: #cc1a00;
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  height: max-content;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.recommendation{
+  flex: 2;
+padding: 0 27px;
+}
