@@ -1,5 +1,13 @@
 import express from "express";
-import { update } from "../controllers/user.js";
+import {
+  allUser,
+  dislike,
+  like,
+  subscribe,
+  unsubscribe,
+  update,
+  userDelete,
+} from "../controllers/user.js";
 import { verifyToken } from "../middleware/verifyToken.js";
 
 const router = express.Router();
@@ -7,17 +15,17 @@ const router = express.Router();
 // UPDATE USER
 router.put("/user/:id", verifyToken, update);
 // DELETE USER
-router.get("/signin");
+router.delete("/user/:id", verifyToken, userDelete);
 // GET A USER
-router.get("/google");
+router.get("/user/:id", verifyToken, allUser);
 
 // SUBSCRIBE A USER
-router.get("/signup");
+router.put("/sub/:id", verifyToken, subscribe);
 // UNSUBSCRIBE A USER
-router.get("/signin");
+router.put("/usub/:id", verifyToken, unsubscribe);
 // LIKE A VIDEO
-router.get("/google");
+router.put("/like/:videoId", verifyToken, like);
 // DISLIKE A VIDEO
-router.get("/google");
+router.put("/like/:videoId", verifyToken, dislike);
 
 export default router;

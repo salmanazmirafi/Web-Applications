@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import auth from "./routes/auth.js";
 import user from "./routes/users.js";
+import video from "./routes/video.js";
+import comment from "./routes/comment.js";
 
 // Handling Uncaught Exception
 process.on("uncaughtException", (err) => {
@@ -32,8 +34,8 @@ app.use(cookieParser());
 app.use(express.json());
 app.use("/api/v1", auth);
 app.use("/api/v1", user);
-// app.use("/api/v1");
-// app.use("/api/v1");
+app.use("/api/v1", video);
+app.use("/api/v1", comment);
 
 // Middleware for Errors
 app.use((err, req, res, next) => {
