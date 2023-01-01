@@ -1,9 +1,11 @@
 import express from "express";
+import { update } from "../controllers/user.js";
+import { verifyToken } from "../middleware/verifyToken.js";
 
 const router = express.Router();
 
 // UPDATE USER
-router.get("/signup");
+router.put("/user/:id", verifyToken, update);
 // DELETE USER
 router.get("/signin");
 // GET A USER

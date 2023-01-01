@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import auth from "./routes/auth.js";
+import user from "./routes/users.js";
 
 // Handling Uncaught Exception
 process.on("uncaughtException", (err) => {
@@ -30,7 +31,7 @@ const connect = () => {
 app.use(cookieParser());
 app.use(express.json());
 app.use("/api/v1", auth);
-// app.use("/api/v1");
+app.use("/api/v1", user);
 // app.use("/api/v1");
 // app.use("/api/v1");
 
