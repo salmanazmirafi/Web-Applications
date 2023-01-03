@@ -11,17 +11,13 @@ const Register = () => {
               <i class="fa-regular fa-user"></i>
               <input
                 type="text"
-                placeholder="Enter Your Full Name"
+                placeholder="Enter Full Name"
                 name="fullName"
               />
             </div>
             <div className="fromGroup">
               <i class="fa-regular fa-user"></i>
-              <input
-                type="text"
-                placeholder="Enter Your User Name"
-                name="username"
-              />
+              <input type="text" placeholder="Enter Username" name="username" />
             </div>
             <div className="fromGroup">
               <i class="fa-regular fa-envelope"></i>
@@ -30,16 +26,34 @@ const Register = () => {
             <div className="fromGroup">
               <i class="fa-solid fa-lock"></i>
               <input
-                type="text"
-                placeholder="Enter Your Password"
+                type="password"
+                placeholder="Enter Password"
                 name="password"
               />
             </div>
-            <div className="genderGroup">
-              <label htmlFor="gender">Gender</label>
-              Male : <input type="radio" name="gender" id="male" />
-              Female : <input type="radio" name="gender" id="female" />
-              Other : <input type="radio" name="gender" id="other" />
+            <div className="fromGroup">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                placeholder="Conform Password"
+                name="password"
+              />
+            </div>
+
+            <div className="genderGroup custom_gender">
+              <div className="male">
+                <label htmlFor="male"> Male </label>
+                <input type="radio" name="gender" id="male" />
+              </div>
+              <div className="ffemal">
+                {" "}
+                <label htmlFor="female"> Female </label>
+                <input type="radio" name="gender" id="female" />
+              </div>
+              <div className="others">
+                <label htmlFor="other"> Other </label>
+                <input type="radio" name="gender" id="other" />
+              </div>
             </div>
             <button className="btn">Register</button>
           </form>

@@ -57,3 +57,8 @@
 .genderGroup {
   margin: 10px 0;
 }
+.custom_gender {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,14 @@
+.navbar {
+  background-color: lightskyblue;
+}
+
+.navContainer {
+  width: 1170px;
+  max-width: 2000px;
+  margin: auto;
+}
+.navContainer .navWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}/*# sourceMappingURL=navbar.css.map */
