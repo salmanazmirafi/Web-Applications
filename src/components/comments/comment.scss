@@ -1,0 +1,49 @@
+.comments {
+  position: relative;
+  .coWrite {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .input {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .profileImage {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+      .commentItem {
+        background-color: rgb(231, 231, 231);
+        width: 100%;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 5px;
+        input {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          width: 100%;
+        }
+      }
+      .Emoji {
+        width: 15px;
+        height: 15px;
+      }
+      .emojiSetting {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        z-index: 999;
+      }
+    }
+    button {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.shareContainer {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.shareContainer .writeShare {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shareContainer .writeShare img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.shareContainer .writeShare input {
+  width: 100%;
+  border: 1px solid rgb(135, 135, 135);
+  border-radius: 20px;
+  padding: 6px 10px;
+  outline: none;
+  margin-left: 5px;
+}
+.shareContainer .shareOptions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+.shareContainer .shareOptions .shareItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.shareContainer .shareOptions .shareItem img {
+  width: 24px;
+  height: 24px;
+}
+.shareContainer .shareOptions i {
+  font-size: 18px;
+}
+.shareContainer .shareOptions span {
+  color: rgb(104, 104, 104);
+}/*# sourceMappingURL=share.css.map */

@@ -15,18 +15,18 @@ const Navbar = () => {
           </div>
           <div className="navItem">
             <div className="rightItem">
-              <Link to="/">
-                <i class="fa-brands fa-facebook-messenger"></i>
-              </Link>
               <Link to="/messenger">
-                <i class="fa-solid fa-bell"></i>
+                <i className="fa-brands fa-facebook-messenger"></i>
+              </Link>
+              <Link to="/notification">
+                <i className="fa-solid fa-bell"></i>
               </Link>{" "}
             </div>
             <div className="profile">
               <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
                   <img
-                    src="https://yt3.ggpht.com/ytc/AMLnZu-x6DTqatGoVgSzYX6rs4JFiJM7JVN_SvNVeQ=s48-c-k-c0x00ffffff-no-rj"
+                    src="https://media.licdn.com/dms/image/D4E03AQEbPe4U69bN7Q/profile-displayphoto-shrink_100_100/0/1668858818640?e=1678320000&v=beta&t=fIdSFlyxhBdsL5WnXYQOnRWyLcFQRjzAzoqe30Z7JmM"
                     alt=""
                   />
                 </Dropdown.Toggle>

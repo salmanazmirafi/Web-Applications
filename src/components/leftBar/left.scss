@@ -1,28 +1,33 @@
 .left {
   flex: 2;
-  height: 100vh;
+  height: 62vh;
   margin-right: 15px;
-  background-color: white;
-}
-.leftContainer {
-  .profileLeft {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    img {
-      width: 100%;
-    }
-  }
+  background-color: rgb(255, 255, 255);
 }
 
-.profileImage {
-  position: absolute;
-  top: 25px;
-}
-.profileImage img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+.leftContainer {
+  .leftWrapper {
+    padding: 20px;
+    .leftIcon {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      padding-bottom: 20px;
+      margin: 0;
+
+      a {
+        padding: 10px;
+        width: 100%;
+        border-radius: 50px;
+        text-decoration: none;
+        i {
+          margin-right: 10px;
+        }
+      }
+
+      :hover {
+        background-color: rgb(16, 16, 16);
+      }
+    }
+  }
 }

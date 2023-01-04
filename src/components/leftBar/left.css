@@ -1,28 +1,29 @@
 .left {
   flex: 2;
-  height: 100vh;
+  height: 62vh;
   margin-right: 15px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
-.leftContainer .profileLeft {
+.leftContainer .leftWrapper {
+  padding: 20px;
+}
+.leftContainer .leftWrapper .leftIcon {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
-  position: relative;
+  padding-bottom: 20px;
+  margin: 0;
 }
-.leftContainer .profileLeft img {
+.leftContainer .leftWrapper .leftIcon a {
+  padding: 10px;
   width: 100%;
+  border-radius: 50px;
+  text-decoration: none;
 }
-
-.profileImage {
-  position: absolute;
-  top: 25px;
+.leftContainer .leftWrapper .leftIcon a i {
+  margin-right: 10px;
 }
-
-.profileImage img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+.leftContainer .leftWrapper .leftIcon :hover {
+  background-color: rgb(16, 16, 16);
 }/*# sourceMappingURL=left.css.map */

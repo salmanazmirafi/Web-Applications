@@ -1,7 +1,8 @@
 import React from "react";
+import "./messanger.css";
 
 const Messenger = () => {
-  return <div>Messenger</div>;
+  return <div className="messenger">Messenger</div>;
 };
 
 export default Messenger;

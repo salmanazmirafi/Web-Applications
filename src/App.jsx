@@ -10,6 +10,7 @@ import Discovery from "./pages/discover/Discovery";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Messenger from "./pages/messenger/Messenger";
+import Notification from "./pages/notifi/Notification";
 import Register from "./pages/register/Register";
 import "./style.css";
 
@@ -26,6 +27,7 @@ function App() {
               display: "flex",
               width: "1170px",
               margin: "auto",
+              scrollBehavior: "smooth",
             }}
           >
             <Left />
@@ -66,6 +68,10 @@ function App() {
         {
           path: "/messenger",
           element: <Messenger />,
+        },
+        {
+          path: "/notification",
+          element: <Notification />,
         },
       ],
     },

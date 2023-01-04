@@ -1,0 +1,48 @@
+.comments {
+  position: relative;
+}
+.comments .coWrite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.comments .coWrite .input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.comments .coWrite .input .profileImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.comments .coWrite .input .commentItem {
+  background-color: rgb(231, 231, 231);
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 5px;
+}
+.comments .coWrite .input .commentItem input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.comments .coWrite .input .Emoji {
+  width: 15px;
+  height: 15px;
+}
+.comments .coWrite .input .emojiSetting {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+.comments .coWrite button {
+  font-size: 16px;
+  margin-left: 10px;
+}/*# sourceMappingURL=comment.css.map */
