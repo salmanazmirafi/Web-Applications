@@ -1,5 +1,5 @@
 .navbar {
-  background-color: lightskyblue;
+  padding: 10px 0;
 }
 
 .navContainer {
@@ -11,5 +11,49 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    .logo > a {
+      color: black;
+      font-weight: bolder;
+      text-decoration: none;
+      font-size: 25px;
+      span {
+        color: orange;
+      }
+    }
+    .navItem {
+      display: flex;
+      gap: 28px;
+      .rightItem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        i {
+          color: black;
+          font-size: 14px;
+          background-color: rgb(239, 239, 239);
+          padding: 8px;
+          border-radius: 50%;
+          &.active {
+            color: red;
+          }
+        }
+      }
+      .profile {
+        #dropdown-basic {
+          padding: 0;
+          margin: 0;
+          background-color: transparent;
+          border: none;
+          box-shadow: none;
+        }
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+        }
+      }
+    }
   }
 }

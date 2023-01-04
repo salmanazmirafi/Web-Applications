@@ -1,3 +1,28 @@
 .left {
   flex: 2;
+  height: 100vh;
+  margin-right: 15px;
+  background-color: white;
+}
+
+.leftContainer .profileLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.leftContainer .profileLeft img {
+  width: 100%;
+}
+
+.profileImage {
+  position: absolute;
+  top: 25px;
+}
+
+.profileImage img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }/*# sourceMappingURL=left.css.map */

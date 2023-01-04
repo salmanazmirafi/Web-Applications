@@ -6,8 +6,10 @@ import {
 } from "react-router-dom";
 import Left from "./components/leftBar/Left";
 import Navbar from "./components/navbar/Navbar";
+import Discovery from "./pages/discover/Discovery";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
+import Messenger from "./pages/messenger/Messenger";
 import Register from "./pages/register/Register";
 import "./style.css";
 
@@ -18,10 +20,18 @@ function App() {
     return (
       <div>
         <Navbar />
-        <div style={{ display: "flex" }}>
-          <Left />
-          <div style={{ flex: 8 }}>
-            <Outlet />
+        <div style={{ background: "#F3F2EF", paddingTop: "20px" }}>
+          <div
+            style={{
+              display: "flex",
+              width: "1170px",
+              margin: "auto",
+            }}
+          >
+            <Left />
+            <div style={{ flex: 8 }}>
+              <Outlet />
+            </div>
           </div>
         </div>
       </div>
@@ -48,6 +58,14 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/discovery",
+          element: <Discovery />,
+        },
+        {
+          path: "/messenger",
+          element: <Messenger />,
         },
       ],
     },
