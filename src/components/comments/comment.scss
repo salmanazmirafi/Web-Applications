@@ -43,7 +43,60 @@
     }
     button {
       font-size: 16px;
-      margin-left: 10px;
+      margin-left: 5px;
+      color: black;
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+  }
+}
+.CommentF {
+  padding: 15px 1px;
+
+  .FieldItem {
+    display: flex;
+    margin-bottom: 17px;
+    gap: 10px;
+    img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .FieldsDesc {
+      background-color: rgb(231, 231, 231);
+      padding: 10px 6px;
+      border-radius: 10px;
+      h6 {
+        font-size: 15px;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+    .coIcon {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .IconComments {
+        font-size: 12px;
+        font-weight: bolder;
+        display: flex;
+        cursor: pointer;
+        gap: 6px;
+        & :hover {
+          text-decoration: underline;
+        }
+      }
+      .timeComments {
+        font-size: 10px;
+        font-weight: bolder;
+      }
     }
   }
 }

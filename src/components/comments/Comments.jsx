@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import EmojiPicker from "emoji-picker-react";
 import "./comment.css";
+import Comment from "./Comment";
 
 const Comments = () => {
   const [emojiOpen, setEmoji] = useState(false);
@@ -33,6 +34,7 @@ const Comments = () => {
           <i className="fa-sharp fa-solid fa-paper-plane"></i>
         </button>
       </div>
+      <Comment />
     </div>
   );
 };
