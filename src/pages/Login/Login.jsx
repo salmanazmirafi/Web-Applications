@@ -1,31 +1,36 @@
-import React from "react";
-import "../register/register.css";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/authContext";
+import "./login.scss";
 
 const Login = () => {
+  const { login } = useContext(AuthContext);
+
+  const handleLogin = () => {
+    login();
+  };
+
   return (
-    <div className="register">
-      <div className="registerContainer">
-        <div className="wrapper">
+    <div className="login">
+      <div className="card">
+        <div className="left">
+          <h1>Hello World.</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
+            alias totam numquam ipsa exercitationem dignissimos, error nam,
+            consequatur.
+          </p>
+          <span>Don't you have an account?</span>
+          <Link to="/register">
+            <button>Register</button>
+          </Link>
+        </div>
+        <div className="right">
+          <h1>Login</h1>
           <form>
-            <div className="fromGroup">
-              <i class="fa-regular fa-user"></i>
-              <input
-                type="text"
-                placeholder="Enter Your User Name"
-                name="username"
-              />
-            </div>
-
-            <div className="fromGroup">
-              <i class="fa-solid fa-lock"></i>
-              <input
-                type="text"
-                placeholder="Enter Your Password"
-                name="password"
-              />
-            </div>
-
-            <button className="btn">Register</button>
+            <input type="text" placeholder="Username" />
+            <input type="password" placeholder="Password" />
+            <button onClick={handleLogin}>Login</button>
           </form>
         </div>
       </div>

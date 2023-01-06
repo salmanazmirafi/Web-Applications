@@ -1,91 +1,84 @@
+@import "../../style.scss";
+
 .navbar {
-  padding: 10px 0;
-  background-color: white;
-}
-
-.navContainer {
-  width: 1170px;
-  max-width: 2000px;
-
-  margin: auto;
-  .navWrapper {
+  @include themify($themes) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .logo > a {
-      color: black;
-      font-weight: bolder;
-      text-decoration: none;
-      font-size: 25px;
-      span {
-        color: orange;
-      }
-    }
-    .navItem {
+    padding: 10px 20px;
+    height: 50px;
+    border-bottom: 1px solid themed("border");
+    position: sticky;
+    top: 0;
+    background-color: themed("bg");
+    color:themed("textColor");
+    z-index: 999;
+
+    .left {
       display: flex;
-      gap: 28px;
-      .rightItem {
+      align-items: center;
+      gap: 30px;
+
+      span {
+        font-weight: bold;
+        font-size: 20px;
+        color: themed("logo");
+      }
+
+      .search {
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 8px;
+        gap: 10px;
+        border: 1px solid themed("border");
+        border-radius: 5px;
+        padding: 5px;
 
-        i {
-          color: black;
-          font-size: 14px;
-          background-color: rgb(216, 215, 215);
-          padding: 8px;
-          border-radius: 50%;
-          &.active {
-            color: red;
+        input {
+          border: none;
+          width: 500px;
+          background-color: transparent;
+          color: themed("textColor");
+
+          @include mobile{
+            display: none;
+          }
+
+          @include tablet{
+            width: 200px;
           }
         }
       }
-      .profile {
-        #dropdown-basic {
-          padding: 0;
-          margin: 0;
-          background-color: transparent;
-          border: none;
-          box-shadow: none;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @include mobile{
+        display: none;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+
+        @include tablet{
+          display: none;
         }
+
         img {
-          width: 35px;
-          height: 35px;
+          width: 30px;
+          height: 30px;
           border-radius: 50%;
+          object-fit: cover;
+        }
+
+        span {
         }
       }
     }
   }
-}
-
-.searchBox {
-  width: 38%;
-  display: flex;
-  align-items: center;
-  background: rgb(235, 235, 235);
-  border-radius: 50px;
-  padding: 7px 5px;
-}
-.iconBox1 {
-  width: 25%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 25px;
-}
-
-.searchBox input {
-  padding: 0 5px;
-  width: 100%;
-  background: rgb(235, 235, 235);
-  border: none;
-  box-shadow: 0 2px 5px 0 var(--shadow);
-  outline: none;
-}
-.searchBox i {
-  cursor: pointer;
-  margin-right: 5px;
-}
-.searchBox i:hover {
-  color: #1877f2;
 }

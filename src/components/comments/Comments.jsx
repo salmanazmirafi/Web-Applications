@@ -1,40 +1,45 @@
-import React, { useState } from "react";
-import EmojiPicker from "emoji-picker-react";
-import "./comment.css";
-import Comment from "./Comment";
+import { useContext } from "react";
+import "./comments.scss";
+import { AuthContext } from "../../context/authContext";
 
 const Comments = () => {
-  const [emojiOpen, setEmoji] = useState(false);
+  const { currentUser } = useContext(AuthContext);
+  //Temporary
+  const comments = [
+    {
+      id: 1,
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nequeaspernatur ullam aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nequeaspernatur ullam aperiam",
+      name: "John Doe",
+      userId: 1,
+      profilePicture:
+        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      id: 2,
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nequeaspernatur ullam aperiam",
+      name: "Jane Doe",
+      userId: 2,
+      profilePicture:
+        "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    },
+  ];
   return (
     <div className="comments">
-      <div className="coWrite">
-        <div className="input">
-          <img
-            className="profileImage"
-            src="https://media.licdn.com/dms/image/D4E03AQEbPe4U69bN7Q/profile-displayphoto-shrink_100_100/0/1668858818640?e=1678320000&v=beta&t=fIdSFlyxhBdsL5WnXYQOnRWyLcFQRjzAzoqe30Z7JmM"
-            alt=""
-          />{" "}
-          <div className="commentItem">
-            <input type="text" placeholder="Writing comment......" />
-            <img
-              className="Emoji"
-              src="https://cdn-icons-png.flaticon.com/512/3404/3404134.png"
-              onClick={() => {
-                setEmoji(!emojiOpen);
-              }}
-              alt=""
-            />
-            <div className="emojiSetting">
-              {" "}
-              {emojiOpen ? <EmojiPicker /> : ""}
-            </div>
-          </div>
-        </div>
-        <button>
-          <i className="fa-sharp fa-solid fa-paper-plane"></i>
-        </button>
+      <div className="write">
+        <img src={currentUser.profilePic} alt="" />
+        <input type="text" placeholder="write a comment" />
+        <button>Send</button>
       </div>
-      <Comment />
+      {comments.map((comment) => (
+        <div className="comment">
+          <img src={comment.profilePicture} alt="" />
+          <div className="info">
+            <span>{comment.name}</span>
+            <p>{comment.desc}</p>
+          </div>
+          <span className="date">1 hour ago</span>
+        </div>
+      ))}
     </div>
   );
 };

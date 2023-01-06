@@ -1,61 +1,30 @@
-import React from "react";
-import "./register.css";
+import { Link } from "react-router-dom";
+import "./register.scss";
 
 const Register = () => {
   return (
     <div className="register">
-      <div className="registerContainer">
-        <div className="wrapper">
+      <div className="card">
+        <div className="left">
+          <h1>Lama Social.</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
+            alias totam numquam ipsa exercitationem dignissimos, error nam,
+            consequatur.
+          </p>
+          <span>Do you have an account?</span>
+          <Link to="/login">
+          <button>Login</button>
+          </Link>
+        </div>
+        <div className="right">
+          <h1>Register</h1>
           <form>
-            <div className="fromGroup">
-              <i class="fa-regular fa-user"></i>
-              <input
-                type="text"
-                placeholder="Enter Full Name"
-                name="fullName"
-              />
-            </div>
-            <div className="fromGroup">
-              <i class="fa-regular fa-user"></i>
-              <input type="text" placeholder="Enter Username" name="username" />
-            </div>
-            <div className="fromGroup">
-              <i class="fa-regular fa-envelope"></i>
-              <input type="email" placeholder="Enter Your Email" name="email" />
-            </div>
-            <div className="fromGroup">
-              <i class="fa-solid fa-lock"></i>
-              <input
-                type="password"
-                placeholder="Enter Password"
-                name="password"
-              />
-            </div>
-            <div className="fromGroup">
-              <i class="fa-solid fa-lock"></i>
-              <input
-                type="password"
-                placeholder="Conform Password"
-                name="password"
-              />
-            </div>
-
-            <div className="genderGroup custom_gender">
-              <div className="male">
-                <label htmlFor="male"> Male </label>
-                <input type="radio" name="gender" id="male" />
-              </div>
-              <div className="ffemal">
-                {" "}
-                <label htmlFor="female"> Female </label>
-                <input type="radio" name="gender" id="female" />
-              </div>
-              <div className="others">
-                <label htmlFor="other"> Other </label>
-                <input type="radio" name="gender" id="other" />
-              </div>
-            </div>
-            <button className="btn">Register</button>
+            <input type="text" placeholder="Username" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <input type="text" placeholder="Name" />
+            <button>Register</button>
           </form>
         </div>
       </div>

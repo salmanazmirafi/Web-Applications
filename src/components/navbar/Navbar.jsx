@@ -1,58 +1,49 @@
-import React from "react";
+import "./navbar.scss";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
+import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
+import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { Link } from "react-router-dom";
-import "./navbar.css";
-import Dropdown from "react-bootstrap/Dropdown";
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkModeContext";
+import { AuthContext } from "../../context/authContext";
 
 const Navbar = () => {
+  const { toggle, darkMode } = useContext(DarkModeContext);
+  const { currentUser } = useContext(AuthContext);
+
   return (
     <div className="navbar">
-      <div className="navContainer">
-        <div className="navWrapper">
-          <div className="logo">
-            <Link to="/">
-              Net<span>work</span>
-            </Link>
-          </div>
-
-          <div className="searchBox">
-            <input type="search" />
-            <i className="fas fa-search"></i>
-          </div>
-          <div className="iconBox1">
-            <i className="fa-solid fa-house"></i>
-            <i className="fa-solid fa-user-group"></i>
-            <i className="fa-solid fa-video"></i>
-            <i className="fa-solid fa-gamepad"></i>
-          </div>
-
-          <div className="navItem">
-            <div className="rightItem">
-              <Link to="/messenger">
-                <i className="fa-brands fa-facebook-messenger"></i>
-              </Link>
-              <Link to="/notification">
-                <i className="fa-solid fa-bell"></i>
-              </Link>{" "}
-            </div>
-
-            <div className="profile">
-              <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                  <img
-                    src="https://media.licdn.com/dms/image/D4E03AQEbPe4U69bN7Q/profile-displayphoto-shrink_100_100/0/1668858818640?e=1678320000&v=beta&t=fIdSFlyxhBdsL5WnXYQOnRWyLcFQRjzAzoqe30Z7JmM"
-                    alt=""
-                  />
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                  <Dropdown.Item href="/profile">Profile</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Drake Mode</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">Setting</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">Log Out</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </div>
-          </div>
+      <div className="left">
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span>lamasocial</span>
+        </Link>
+        <HomeOutlinedIcon />
+        {darkMode ? (
+          <WbSunnyOutlinedIcon onClick={toggle} />
+        ) : (
+          <DarkModeOutlinedIcon onClick={toggle} />
+        )}
+        <GridViewOutlinedIcon />
+        <div className="search">
+          <SearchOutlinedIcon />
+          <input type="text" placeholder="Search..." />
+        </div>
+      </div>
+      <div className="right">
+        <PersonOutlinedIcon />
+        <EmailOutlinedIcon />
+        <NotificationsOutlinedIcon />
+        <div className="user">
+          <img
+            src={currentUser.profilePic}
+            alt=""
+          />
+          <span>{currentUser.name}</span>
         </div>
       </div>
     </div>

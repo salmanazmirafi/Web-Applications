@@ -1,46 +1,53 @@
-import React, { useState } from "react";
+import "./post.scss";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
+import TextsmsOutlinedIcon from "@mui/icons-material/TextsmsOutlined";
+import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Link } from "react-router-dom";
 import Comments from "../comments/Comments";
-import "./post.css";
+import { useState } from "react";
 
-const Post = ({ posts }) => {
+const Post = ({ post }) => {
   const [commentOpen, setCommentOpen] = useState(false);
+
+  //TEMPORARY
+  const liked = false;
+
   return (
     <div className="post">
-      <div className="postContainer">
+      <div className="container">
         <div className="user">
           <div className="userInfo">
-            <img src={posts.profilePic} alt="" />
+            <img src={post.profilePic} alt="" />
             <div className="details">
-              {" "}
               <Link
-                to={`/profile/${posts.userId}`}
+                to={`/profile/${post.userId}`}
                 style={{ textDecoration: "none", color: "inherit" }}
               >
-                <span className="name">{posts.name}</span>
+                <span className="name">{post.name}</span>
               </Link>
-              <span className="date">{posts.time} ago</span>
+              <span className="date">1 min ago</span>
             </div>
           </div>
-          <i class="fa-solid fa-ellipsis-vertical"></i>
+          <MoreHorizIcon />
         </div>
         <div className="content">
-          <p>{posts.desc}</p>
-          <img src={posts.img} alt="" />
+          <p>{post.desc}</p>
+          <img src={post.img} alt="" />
         </div>
-
         <div className="info">
           <div className="item">
-            <i className="fa-regular fa-heart"></i>
-            <span> {posts.like} Likes</span>
+            {liked ? <FavoriteOutlinedIcon /> : <FavoriteBorderOutlinedIcon />}
+            12 Likes
           </div>
           <div className="item" onClick={() => setCommentOpen(!commentOpen)}>
-            <i className="fa-solid fa-comment"></i>
-            <span>{posts.comment} Comments</span>
+            <TextsmsOutlinedIcon />
+            12 Comments
           </div>
           <div className="item">
-            <i className="fa-solid fa-share"></i>
-            <span>{posts.share} Share</span>
+            <ShareOutlinedIcon />
+            Share
           </div>
         </div>
         {commentOpen && <Comments />}

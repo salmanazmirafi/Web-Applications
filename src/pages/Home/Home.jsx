@@ -1,15 +1,16 @@
-import React from "react";
-import Midd from "../../components/middl/Midd";
-import Right from "../../components/rightBar/Right";
-import "./home.css";
+import Stories from "../../components/stories/Stories"
+import Posts from "../../components/posts/Posts"
+import Share from "../../components/share/Share"
+import "./home.scss"
 
 const Home = () => {
   return (
     <div className="home">
-      <Midd />
-      <Right />
+      <Stories/>
+      <Share/>
+      <Posts/>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
