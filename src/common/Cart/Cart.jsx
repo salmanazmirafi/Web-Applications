@@ -3,7 +3,7 @@ import "./cart.css";
 
 const Cart = ({ CartItem, addToCart, decreaseQty }) => {
   // Stpe: 7   calucate total of items
-  const totalPrice = CartItem.reduce(
+  const totalPrice = CartItem?.reduce(
     (price, item) => price + item.qty * item.price,
     0
   );
@@ -16,7 +16,7 @@ const Cart = ({ CartItem, addToCart, decreaseQty }) => {
           {/* if hamro cart ma kunai pani item xaina bhane no diplay */}
 
           <div className="cart-details">
-            {CartItem.length === 0 && (
+            {CartItem?.length === 0 && (
               <h1 className="no-items product">No Items are add in Cart</h1>
             )}
 
