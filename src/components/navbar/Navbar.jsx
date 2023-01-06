@@ -13,6 +13,18 @@ const Navbar = () => {
               Net<span>work</span>
             </Link>
           </div>
+
+          <div className="searchBox">
+            <input type="search" />
+            <i className="fas fa-search"></i>
+          </div>
+          <div className="iconBox1">
+            <i className="fa-solid fa-house"></i>
+            <i className="fa-solid fa-user-group"></i>
+            <i className="fa-solid fa-video"></i>
+            <i className="fa-solid fa-gamepad"></i>
+          </div>
+
           <div className="navItem">
             <div className="rightItem">
               <Link to="/messenger">
@@ -22,6 +34,7 @@ const Navbar = () => {
                 <i className="fa-solid fa-bell"></i>
               </Link>{" "}
             </div>
+
             <div className="profile">
               <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">

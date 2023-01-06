@@ -5,30 +5,3 @@
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
 }
-
-.leftContainer {
-  .leftWrapper {
-    padding: 20px;
-    .leftIcon {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      padding-bottom: 20px;
-      margin: 0;
-
-      a {
-        padding: 10px;
-        width: 100%;
-        border-radius: 50px;
-        text-decoration: none;
-        i {
-          margin-right: 10px;
-        }
-      }
-
-      :hover {
-        background-color: rgb(16, 16, 16);
-      }
-    }
-  }
-}

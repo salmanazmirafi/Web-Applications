@@ -4,27 +4,4 @@
   margin-right: 15px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
-}
-
-.leftContainer .leftWrapper {
-  padding: 20px;
-}
-.leftContainer .leftWrapper .leftIcon {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  padding-bottom: 20px;
-  margin: 0;
-}
-.leftContainer .leftWrapper .leftIcon a {
-  padding: 10px;
-  width: 100%;
-  border-radius: 50px;
-  text-decoration: none;
-}
-.leftContainer .leftWrapper .leftIcon a i {
-  margin-right: 10px;
-}
-.leftContainer .leftWrapper .leftIcon :hover {
-  background-color: rgb(16, 16, 16);
 }/*# sourceMappingURL=left.css.map */
