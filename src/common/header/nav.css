@@ -111,14 +111,13 @@ header ul li a:hover {
   display: none;
 }
 .search.active {
-  height: 12vh;
+  padding: 20px;
   position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
   background-color: #fff;
   box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.2);
-  transition: 0.5s;
 }
 
 @media (max-width: 768px) {
