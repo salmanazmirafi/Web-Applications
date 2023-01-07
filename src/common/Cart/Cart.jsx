@@ -37,11 +37,6 @@ const Cart = ({ CartItem, addToCart, decreaseQty }) => {
                     </h4>
                   </div>
                   <div className="cart-items-function">
-                    <div className="removeCart">
-                      <button className="removeCart">
-                        <i className="fa-solid fa-xmark"></i>
-                      </button>
-                    </div>
                     {/* stpe: 5 
                     product ko qty lai inc ra des garne
                     */}
