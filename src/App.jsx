@@ -7,6 +7,7 @@ import Data from "./components/Data";
 import { useState } from "react";
 import Sdata from "./components/shops/Sdata";
 import SignUp from "./pages/SignUp";
+import Shop from "./pages/Shop";
 
 const App = () => {
   //Step 1 :
@@ -72,6 +73,16 @@ const App = () => {
                 path="/"
                 element={
                   <Pages
+                    productItems={productItems}
+                    addToCart={addToCart}
+                    shopItems={shopItems}
+                  />
+                }
+              />
+              <Route
+                path="/shop"
+                element={
+                  <Shop
                     productItems={productItems}
                     addToCart={addToCart}
                     shopItems={shopItems}

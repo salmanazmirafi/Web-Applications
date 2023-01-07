@@ -1,12 +1,14 @@
 import React from "react";
+import Catg from "./Catg";
 import ShopCart from "./ShopCart";
 import "./style.css";
 
-const Shop = ({ addToCart, shopItems }) => {
+const ShopIng = ({ addToCart, shopItems }) => {
   return (
     <>
       <section className="shop background">
-        <div className="container ">
+        <div className="container d_flex">
+          <Catg />
           <div className="">
             <div className="heading d_flex">
               <div className="heading-left row  f_flex">
@@ -27,4 +29,4 @@ const Shop = ({ addToCart, shopItems }) => {
   );
 };
 
-export default Shop;
+export default ShopIng;

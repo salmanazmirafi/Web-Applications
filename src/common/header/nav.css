@@ -111,7 +111,7 @@ header ul li a:hover {
   display: none;
 }
 .search.active {
-  padding: 20px;
+  padding: 20px 0;
   position: fixed;
   top: 0;
   z-index: 1000;

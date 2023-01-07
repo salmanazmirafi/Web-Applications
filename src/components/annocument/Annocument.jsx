@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../newarrivals/style.css";
+
 import Ddata from "../discount/Ddata";
 
 const Dcard = () => {
@@ -14,7 +15,7 @@ const Dcard = () => {
     autoplay: true,
   };
   return (
-    <>
+    <div className="container">
       <Slider {...settings}>
         {Ddata.map((value, index) => {
           return (
@@ -30,7 +31,7 @@ const Dcard = () => {
           );
         })}
       </Slider>
-    </>
+    </div>
   );
 };
 
