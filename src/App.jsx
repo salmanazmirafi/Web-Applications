@@ -49,7 +49,7 @@ const App = () => {
       );
     }
   };
-  const currentUser = false;
+  const currentUser = true;
 
   return (
     <>
