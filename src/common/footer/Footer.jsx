@@ -1,59 +1,215 @@
 import React from "react";
 import "./footer.css";
+import img1 from "../../components/assets/images/logo.svg";
+import img2 from "../../components/assets/images/payment-img.png";
 
 const Footer = () => {
   return (
     <>
-      <footer>
-        <div className="container grid2">
-          <div className="box">
-            <h1>Bonik</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-              libero id et, in gravida. Sit diam duis mauris nulla cursus. Erat
-              et lectus vel ut sollicitudin elit at amet.
-            </p>
-            <div className="icon d_flex">
-              <div className="img d_flex">
-                <i class="fa-brands fa-google-play"></i>
-                <span>Google Play</span>
-              </div>
-              <div className="img d_flex">
-                <i class="fa-brands fa-app-store-ios"></i>
-                <span>App Store</span>
-              </div>
-            </div>
-          </div>
+      <footer className="footer">
+        <div className="footer-top">
+          <div className="container">
+            <div className="footer-brand">
+              <a href="/" className="logo">
+                <img src={img1} alt="Casmart logo" />
+              </a>
 
-          <div className="box">
-            <h2>About Us</h2>
-            <ul>
-              <li>Careers</li>
-              <li>Our Stores</li>
-              <li>Our Cares</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policy</li>
-            </ul>
-          </div>
-          <div className="box">
-            <h2>Customer Care</h2>
-            <ul>
-              <li>Help Center </li>
-              <li>How to Buy </li>
-              <li>Track Your Order </li>
-              <li>Corporate & Bulk Purchasing </li>
-              <li>Returns & Refunds </li>
-            </ul>
-          </div>
-          <div className="box">
-            <h2>Contact Us</h2>
-            <ul>
+              <p className="footer-text">
+                Casmart is a fashion theme for presents a complete wardrobe of
+                uniquely crafted Ethnic Wear, Casuals, Edgy Denims, &
+                Accessories inspired from the most contemporary
+              </p>
+
+              <ul className="social-list">
+                <li>
+                  <a href className="social-link">
+                    <i className="fa-brands fa-facebook"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/" className="social-link">
+                    <i className="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href className="social-link">
+                    <i className="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href className="social-link">
+                    <i className="fa-brands fa-pinterest"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <ul className="footer-list">
               <li>
-                70 Washington Square South, New York, NY 10012, United States{" "}
+                <p className="footer-list-title">Information</p>
               </li>
-              <li>Email: uilib.help@gmail.com</li>
-              <li>Phone: +1 1123 456 780</li>
+
+              <li>
+                <a href className="footer-link">
+                  About Company
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  Payment Type
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  Awards Winning
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  World Media Partner
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  Become an Agent
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  Refund Policy
+                </a>
+              </li>
             </ul>
+
+            <ul className="footer-list">
+              <li>
+                <p className="footer-list-title">Category</p>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  Handbags & Wallets
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  Women's Clothing
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  Plus Sizes
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  Complete Your Look
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  Baby Corner
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  Man & Woman Shoe
+                </a>
+              </li>
+            </ul>
+
+            <ul className="footer-list">
+              <li>
+                <p className="footer-list-title">Help & Support</p>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  Dealers & Agents
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  FAQ Information
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  Return Policy
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  Shipping & Delivery
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  Order Tranking
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-link">
+                  List of Shops
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <div className="container">
+            <p className="copyright">
+              &copy; 2022 <a href>salmanazmirafi</a>. All Rights Reserved
+            </p>
+
+            <ul className="footer-bottom-list">
+              <li>
+                <a href className="footer-bottom-link">
+                  Privacy Policy
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-bottom-link">
+                  Terms & Conditions
+                </a>
+              </li>
+
+              <li>
+                <a href className="footer-bottom-link">
+                  Sitemap
+                </a>
+              </li>
+            </ul>
+
+            <div className="payment">
+              <p className="payment-title">We Support</p>
+
+              <img
+                src={img2}
+                alt="Online payment logos"
+                classNameName="payment-img"
+              />
+            </div>
           </div>
         </div>
       </footer>

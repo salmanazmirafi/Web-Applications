@@ -8,6 +8,7 @@ import { useState } from "react";
 import Sdata from "./components/shops/Sdata";
 import SignUp from "./pages/SignUp";
 import Shop from "./pages/Shop";
+import New from "./components/newslider/New";
 
 const App = () => {
   //Step 1 :
@@ -94,6 +95,7 @@ const App = () => {
             <Route path="/signup" element={<SignUp />} />
           )}
         </Routes>
+
         <Footer />
       </BrowserRouter>
     </>
