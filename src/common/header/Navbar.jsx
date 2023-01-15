@@ -30,14 +30,12 @@ const Navbar = () => {
                 <Link to="/shop">Shop</Link>
               </li>
               <li>
-                <Link to="/user">user account</Link>
+                <Link to="/user">About</Link>
               </li>
               <li>
-                <Link to="/vendor">vendor account</Link>
+                <Link to="/vendor">Blog</Link>
               </li>
-              <li>
-                <Link to="/track">track my order</Link>
-              </li>
+
               <li>
                 <Link to="/contact">contact</Link>
               </li>
