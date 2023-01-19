@@ -1,4 +1,9 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  Outlet,
+  RouterProvider,
+} from "react-router-dom";
 import Cart from "./common/Cart/Cart";
 import Footer from "./common/footer/Footer";
 import Header from "./common/header/Header";
@@ -52,52 +57,71 @@ const App = () => {
   };
   const currentUser = true;
 
-  return (
-    <>
-      <BrowserRouter>
+  const Layout = () => {
+    return (
+      <div>
         <Header />
-        <Routes>
-          {currentUser ? (
-            <>
-              <Route
-                path="/cart"
-                element={
-                  <Cart
-                    CartItem={CartItem}
-                    addToCart={addToCart}
-                    decreaseQty={decreaseQty}
-                  />
-                }
-              />
-              <Route
-                path="/"
-                element={
-                  <Pages
-                    productItems={productItems}
-                    addToCart={addToCart}
-                    shopItems={shopItems}
-                  />
-                }
-              />
-              <Route
-                path="/shop"
-                element={
-                  <Shop
-                    productItems={productItems}
-                    addToCart={addToCart}
-                    shopItems={shopItems}
-                  />
-                }
-              />
-            </>
-          ) : (
-            <Route path="/signup" element={<SignUp />} />
-          )}
-        </Routes>
-
+        <Outlet />
         <Footer />
-      </BrowserRouter>
-    </>
+      </div>
+    );
+  };
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/login" />;
+    }
+    return children;
+  };
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <ProtectedRoute>
+          <Layout />
+        </ProtectedRoute>
+      ),
+      children: [
+        {
+          path: "/",
+          element: (
+            <Pages
+              productItems={productItems}
+              addToCart={addToCart}
+              shopItems={shopItems}
+            />
+          ),
+        },
+        {
+          path: "/cart",
+          element: (
+            <Cart
+              CartItem={CartItem}
+              addToCart={addToCart}
+              decreaseQty={decreaseQty}
+            />
+          ),
+        },
+        {
+          path: "/cart",
+          element: (
+            <Shop
+              productItems={productItems}
+              addToCart={addToCart}
+              shopItems={shopItems}
+            />
+          ),
+        },
+      ],
+    },
+    {
+      path: "/login",
+      element: <SignUp />,
+    },
+  ]);
+  return (
+    <div>
+      <RouterProvider router={router} />
+    </div>
   );
 };
 
